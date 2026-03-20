@@ -19,13 +19,17 @@ const SectionElementosVisuais = () => {
         <div>
           <h3 className="font-inter font-semibold text-lg text-white mb-1">5.1 Gradientes Lúdicos</h3>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-4">
-            {["Tipo A", "Tipo B", "Tipo C"].map((t, i) => (
-              <div key={t} className="glass-card p-4 flex flex-col gap-3">
-                <ImagePlaceholder label={`Gradiente ${t} — post real`} sublabel="1080 × 1350px" aspectRatio="4/5" />
+            {[
+              { label: "Tipo A", img: bg1, code: "Gradiente escuro sutil com glow inferior" },
+              { label: "Tipo B", img: bg2, code: "Gradiente deep blue com accent roxo" },
+              { label: "Tipo C", img: bg3, code: "Gradiente dark com glow azul orgânico" },
+            ].map((item) => (
+              <div key={item.label} className="glass-card p-4 flex flex-col gap-3">
+                <div className="rounded-xl overflow-hidden" style={{ aspectRatio: "4/5" }}>
+                  <img src={item.img} alt={`Gradiente ${item.label}`} className="w-full h-full object-cover" />
+                </div>
                 <code className="font-mono text-[11px] p-2 rounded-lg block" style={{ background: "rgba(0,0,0,0.3)", color: "rgba(230,231,232,0.5)" }}>
-                  {i === 0 && "linear-gradient(135deg, #2E2EFE 0%, #3245FD 100%)"}
-                  {i === 1 && "radial-gradient(circle at 20% 80%, #2E2EFE, #231F20)"}
-                  {i === 2 && "linear-gradient(180deg, #3245FD 0%, #231F20 100%)"}
+                  {item.code}
                 </code>
               </div>
             ))}
