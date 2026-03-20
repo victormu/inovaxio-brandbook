@@ -1,6 +1,9 @@
 import SectionWrapper from "../miv/SectionWrapper";
 import ImagePlaceholder from "../miv/ImagePlaceholder";
 import { Check, X } from "lucide-react";
+import obj1 from "@/assets/obj1.png";
+import obj2 from "@/assets/obj2.png";
+import obj3 from "@/assets/obj3.png";
 
 const categories = [
   {
@@ -12,7 +15,12 @@ const categories = [
       "Nunca usar fundo branco ou claro",
       "Escala: objeto ocupa entre 40–70% da área da peça",
     ],
-    placeholders: ["Exemplo — Objeto 3D em uso", "Exemplo — Objeto 3D em uso"],
+    images: [
+      { src: obj1, alt: "Objeto 3D — Grid de cristal" },
+      { src: obj2, alt: "Objeto 3D — Cubos metálicos" },
+      { src: obj3, alt: "Objeto 3D — Painéis de vidro" },
+    ],
+    placeholders: [],
   },
   {
     title: "Ilustrações Conceituais",
@@ -62,11 +70,21 @@ const SectionIlustracoes = () => {
                 </li>
               ))}
             </ul>
-            <div className="grid grid-cols-2 gap-4">
-              {cat.placeholders.map((p, i) => (
-                <ImagePlaceholder key={i} label={p} sublabel="1080 × 1350px" aspectRatio="4/5" />
-              ))}
-            </div>
+            {cat.images ? (
+              <div className="grid grid-cols-3 gap-4">
+                {cat.images.map((img, i) => (
+                  <div key={i} className="rounded-xl overflow-hidden" style={{ aspectRatio: "4/5" }}>
+                    <img src={img.src} alt={img.alt} className="w-full h-full object-cover" />
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <div className="grid grid-cols-2 gap-4">
+                {cat.placeholders.map((p, i) => (
+                  <ImagePlaceholder key={i} label={p} sublabel="1080 × 1350px" aspectRatio="4/5" />
+                ))}
+              </div>
+            )}
           </div>
         ))}
 
