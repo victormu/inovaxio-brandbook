@@ -11,8 +11,8 @@ import logoPretaV from "@/assets/logos/inovaxio-preta-vertical.svg";
 const logoVersions = [
   { title: "Versão Preferencial — Colorida Horizontal", img: logoColoridoH, ar: "1/1", bg: undefined },
   { title: "Versão Preferencial — Colorida Vertical", img: logoColoridoV, ar: "1/1", bg: undefined },
-  { title: "Versão Monocromática Branca — Horizontal", img: logoBrancoH, ar: "1/1", bg: undefined },
-  { title: "Versão Monocromática Branca — Vertical", img: logoBrancoV, ar: "1/1", bg: undefined },
+  { title: "Versão Monocromática Branca — Horizontal", img: logoBrancoH, ar: "1/1", bg: "transparent" },
+  { title: "Versão Monocromática Branca — Vertical", img: logoBrancoV, ar: "1/1", bg: "transparent" },
   { title: "Versão Monocromática Escura — Horizontal", img: logoPretaH, ar: "1/1", bg: "#E6E7E8" },
   { title: "Versão Monocromática Escura — Vertical", img: logoPretaV, ar: "1/1", bg: "#E6E7E8" },
 ];
