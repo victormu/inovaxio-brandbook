@@ -40,7 +40,7 @@ const SectionConstrucaoSimbolo = () => {
           </p>
           <div
             className="flex items-center justify-center rounded-xl overflow-hidden"
-            style={{ backgroundColor: "#1A1820" }}
+            style={{ backgroundColor: "#1d1d1b" }}
           >
             <img
               src={gridAureo}
