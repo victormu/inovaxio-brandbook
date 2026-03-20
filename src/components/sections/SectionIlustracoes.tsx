@@ -15,7 +15,12 @@ const categories = [
       "Nunca usar fundo branco ou claro",
       "Escala: objeto ocupa entre 40–70% da área da peça",
     ],
-    placeholders: ["Exemplo — Objeto 3D em uso", "Exemplo — Objeto 3D em uso"],
+    images: [
+      { src: obj1, alt: "Objeto 3D — Grid de cristal" },
+      { src: obj2, alt: "Objeto 3D — Cubos metálicos" },
+      { src: obj3, alt: "Objeto 3D — Painéis de vidro" },
+    ],
+    placeholders: [],
   },
   {
     title: "Ilustrações Conceituais",
