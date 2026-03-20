@@ -1,7 +1,7 @@
 import SectionWrapper from "../miv/SectionWrapper";
 import { X } from "lucide-react";
 
-import logoPrincipal from "@/assets/logo-principal.svg";
+import logoPrincipal from "@/assets/prioridade.svg";
 import logoColoridoVertical from "@/assets/logo-colorido-vertical.svg";
 import logoSimbolo from "@/assets/logo-simbolo.svg";
 import logoMonoBranca from "@/assets/logo-mono-branca.svg";
