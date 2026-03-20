@@ -113,7 +113,6 @@ const SectionCores = () => {
                 <code className="mt-2 block font-mono text-[11px] whitespace-pre-line" style={{ color: "rgba(230,231,232,0.5)" }}>
                   linear-gradient(90deg, #3b3d8e, #4a4cc8, #5555f0, #6366ff){"\n"}background-clip: text
                 </code>
-                </code>
               </div>
             </div>
           </div>
