@@ -55,6 +55,7 @@ const Index = () => {
       <main className="lg:ml-[240px] pt-14">
         <SectionIntroducao />
         <SectionMarcaLogo />
+        <SectionConstrucaoSimbolo />
         <SectionCores />
         <SectionTipografia />
         <SectionElementosVisuais />
