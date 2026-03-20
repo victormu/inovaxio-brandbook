@@ -3,6 +3,9 @@ import ImagePlaceholder from "../miv/ImagePlaceholder";
 import bg1 from "@/assets/bg1.png";
 import bg2 from "@/assets/bg2.png";
 import bg3 from "@/assets/bg3.png";
+import obj1 from "@/assets/obj1.png";
+import obj2 from "@/assets/obj2.png";
+import obj3 from "@/assets/obj3.png";
 
 const SectionElementosVisuais = () => {
   return (
@@ -58,14 +61,20 @@ backdrop-filter: blur(12px);`}
         {/* 5.3 Elementos 3D */}
         <div>
           <h3 className="font-inter font-semibold text-lg text-white mb-4">5.3 Elementos 3D</h3>
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             {[
-              { l: "Objeto 3D — Esfera de cristal", s: "PNG transparente" },
-              { l: "Objeto 3D — Cubos metálicos", s: "PNG transparente" },
-              { l: "Objeto 3D — Painéis de vidro", s: "PNG transparente" },
-              { l: "Objeto 3D — Aperto de mãos", s: "PNG transparente" },
-            ].map(o => (
-              <ImagePlaceholder key={o.l} label={o.l} sublabel={o.s} aspectRatio="1/1" />
+              { label: "Objeto 3D — Grid de cristal", img: obj1 },
+              { label: "Objeto 3D — Cubos metálicos", img: obj2 },
+              { label: "Objeto 3D — Painéis de vidro", img: obj3 },
+            ].map((item) => (
+              <div key={item.label} className="glass-card p-4 flex flex-col gap-3">
+                <div className="rounded-xl overflow-hidden" style={{ aspectRatio: "4/5" }}>
+                  <img src={item.img} alt={item.label} className="w-full h-full object-cover" />
+                </div>
+                <p className="font-inter text-[12px] text-center" style={{ color: "var(--brand-text-secondary)" }}>
+                  {item.label}
+                </p>
+              </div>
             ))}
           </div>
           <p className="font-inter text-sm mt-4" style={{ color: "var(--brand-text-secondary)" }}>
