@@ -96,8 +96,8 @@ const SectionMarcaLogo = () => {
                 borderRadius: 8,
               }}
             >
-              <div className="flex items-center justify-center rounded-md" style={{ width: 160, height: 56, border: "1px solid rgba(255,255,255,0.15)" }}>
-                <span className="font-inter font-bold text-sm" style={{ color: "#2E2EFE" }}>INOVAXIO i/o</span>
+              <div className="flex items-center justify-center" style={{ width: 160, height: 56 }}>
+                <img src={logoMonoBranca} alt="Logo branco" className="w-full" />
               </div>
               {/* X labels */}
               <span className="absolute top-1 left-1/2 -translate-x-1/2 font-inter text-[10px] font-semibold" style={{ color: "#2E2EFE" }}>1X</span>
