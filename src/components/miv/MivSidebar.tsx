@@ -101,7 +101,7 @@ const MivSidebar = () => {
       {/* Footer */}
       <div className="border-t border-t-[rgba(255,255,255,0.06)] px-5 py-4">
         <p className="font-inter text-[10px]" style={{ color: "rgba(230,231,232,0.3)" }}>
-          © 2024 Inovaxio
+          © 2026 Inovaxio
         </p>
       </div>
     </aside>
