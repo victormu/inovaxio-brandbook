@@ -49,15 +49,7 @@ const MivSidebar = () => {
     >
       {/* Logo area */}
       <div className="flex h-16 items-center gap-3 border-b border-b-[rgba(255,255,255,0.06)] px-5">
-        <div
-          className="flex items-center justify-center rounded-lg"
-          style={{
-            width: 36, height: 36,
-            background: "linear-gradient(135deg, #2E2EFE, #3245FD)",
-          }}
-        >
-          <span className="font-inter font-bold text-sm text-white">i/o</span>
-        </div>
+        <img src={simboloBranco} alt="Inovaxio" className="h-8 w-8" />
         <div>
           <p className="font-inter font-semibold text-sm text-white tracking-wide">INOVAXIO</p>
           <p className="font-inter text-[10px]" style={{ color: "rgba(230,231,232,0.5)" }}>MIV v2.0</p>
