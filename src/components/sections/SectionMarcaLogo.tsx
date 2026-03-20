@@ -28,18 +28,57 @@ const SectionMarcaLogo = () => {
           </p>
         </div>
 
-        {/* Logo versions */}
+        {/* Logo versions — Principal (2x) + 4 normal */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          {logoVersions.map(v => (
-            <div key={v.title} className="glass-card p-5 flex flex-col gap-3">
-              <span className="font-inter text-xs font-semibold uppercase tracking-widest" style={{ color: "#2E2EFE" }}>
-                {v.title}
-              </span>
-              <div style={v.bg ? { backgroundColor: v.bg, borderRadius: 12 } : undefined}>
-                <ImagePlaceholder label={v.label} sublabel={v.sub} aspectRatio={v.ar} />
-              </div>
+          {/* Principal — spans 2 columns */}
+          <div className="glass-card p-5 flex flex-col gap-3 sm:col-span-2">
+            <span className="font-inter text-xs font-semibold uppercase tracking-widest" style={{ color: "#2E2EFE" }}>
+              Versão Principal
+            </span>
+            <div className="flex items-center justify-center rounded-xl p-8" style={{ backgroundColor: "#1A1820" }}>
+              <img src={logoPrincipal} alt="Logo principal INOVAXIO" className="w-full max-w-lg" />
             </div>
-          ))}
+          </div>
+
+          {/* Versão Colorida Vertical */}
+          <div className="glass-card p-5 flex flex-col gap-3">
+            <span className="font-inter text-xs font-semibold uppercase tracking-widest" style={{ color: "#2E2EFE" }}>
+              Versão Vertical
+            </span>
+            <div className="flex items-center justify-center rounded-xl p-6" style={{ backgroundColor: "#1A1820" }}>
+              <img src={logoColoridoVertical} alt="Logo colorido vertical" className="h-40" />
+            </div>
+          </div>
+
+          {/* Versão Ícone / Símbolo */}
+          <div className="glass-card p-5 flex flex-col gap-3">
+            <span className="font-inter text-xs font-semibold uppercase tracking-widest" style={{ color: "#2E2EFE" }}>
+              Versão Ícone
+            </span>
+            <div className="flex items-center justify-center rounded-xl p-6" style={{ backgroundColor: "#1A1820" }}>
+              <img src={logoSimbolo} alt="Símbolo i/o" className="h-32" />
+            </div>
+          </div>
+
+          {/* Monocromática Branca */}
+          <div className="glass-card p-5 flex flex-col gap-3">
+            <span className="font-inter text-xs font-semibold uppercase tracking-widest" style={{ color: "#2E2EFE" }}>
+              Monocromática Branca
+            </span>
+            <div className="flex items-center justify-center rounded-xl p-6" style={{ backgroundColor: "#1A1820" }}>
+              <img src={logoMonoBranca} alt="Logo monocromático branco" className="w-full max-w-[220px]" />
+            </div>
+          </div>
+
+          {/* Monocromática Escura / Negativo */}
+          <div className="glass-card p-5 flex flex-col gap-3">
+            <span className="font-inter text-xs font-semibold uppercase tracking-widest" style={{ color: "#2E2EFE" }}>
+              Monocromática Escura
+            </span>
+            <div className="flex items-center justify-center rounded-xl p-6" style={{ backgroundColor: "#E6E7E8", borderRadius: 12 }}>
+              <img src={logoNegativo} alt="Logo monocromático escuro" className="w-full max-w-[220px]" />
+            </div>
+          </div>
         </div>
 
         {/* Spacing diagram */}
