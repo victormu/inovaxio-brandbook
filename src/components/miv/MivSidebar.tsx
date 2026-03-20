@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import simboloBranco from "@/assets/simbolo-branco.svg";
 
 const sections = [
   { id: "introducao", num: "01", label: "Introdução" },
