@@ -4,6 +4,9 @@ import { Check, X } from "lucide-react";
 import obj1 from "@/assets/obj1.png";
 import obj2 from "@/assets/obj2.png";
 import obj3 from "@/assets/obj3.png";
+import ilus1 from "@/assets/ilus1.png";
+import ilus2 from "@/assets/ilus2.png";
+import ilus3 from "@/assets/ilus3.png";
 
 const categories = [
   {
