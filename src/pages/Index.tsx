@@ -1,4 +1,5 @@
 import MivSidebar from "@/components/miv/MivSidebar";
+import logoSimbolo from "@/assets/logo-simbolo.svg";
 import BackToTop from "@/components/miv/BackToTop";
 import SectionIntroducao from "@/components/sections/SectionIntroducao";
 import SectionMarcaLogo from "@/components/sections/SectionMarcaLogo";
@@ -21,14 +22,8 @@ const TopBar = () => (
   >
     <div className="flex items-center gap-3">
       {/* Small logo placeholder */}
-      <div
-        className="flex items-center justify-center rounded-md"
-        style={{
-          width: 32, height: 32,
-          background: "linear-gradient(135deg, #2E2EFE, #3245FD)",
-        }}
-      >
-        <span className="font-inter font-bold text-[10px] text-white">i/o</span>
+      <div className="flex items-center justify-center rounded-md overflow-hidden" style={{ width: 32, height: 32 }}>
+        <img src={logoSimbolo} alt="Inovaxio" className="w-full h-full object-contain" />
       </div>
       <span className="font-inter text-sm font-semibold text-white hidden sm:inline">INOVAXIO</span>
     </div>
