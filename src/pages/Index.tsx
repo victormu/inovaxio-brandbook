@@ -21,9 +21,7 @@ const TopBar = () => (
       borderColor: "rgba(255,255,255,0.06)",
     }}
   >
-    <div className="flex items-center gap-3">
-      <span className="font-inter text-sm font-semibold text-white hidden sm:inline">INOVAXIO</span>
-    </div>
+    <div className="flex items-center gap-3" />
     <div className="flex items-center gap-3">
       <span className="font-inter text-[13px] font-medium hidden sm:inline" style={{ color: "var(--brand-text-secondary)" }}>
         Manual de Identidade Visual
