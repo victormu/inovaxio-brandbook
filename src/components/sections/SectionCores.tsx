@@ -95,13 +95,24 @@ const SectionCores = () => {
             </div>
             {/* Gradient Text */}
             <div className="glass-card overflow-hidden">
-              <div className="flex h-28 items-center justify-center" style={{ borderRadius: "16px 16px 0 0", background: "rgba(255,255,255,0.02)" }}>
-                <span className="text-gradient font-inter text-3xl font-black">INOVAXIO</span>
+              <div className="flex h-28 items-center justify-center px-6" style={{ borderRadius: "16px 16px 0 0", background: "rgba(255,255,255,0.02)" }}>
+                <span
+                  className="font-inter text-2xl md:text-3xl font-black"
+                  style={{
+                    background: "linear-gradient(90deg, #1a1a8e, #2E2EFE 40%, #3245FD 70%, #5a6eff)",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                    backgroundClip: "text",
+                  }}
+                >
+                  Seus Sistemas.
+                </span>
               </div>
               <div className="p-4">
                 <span className="font-inter text-sm font-semibold text-white">Gradiente de Texto</span>
                 <code className="mt-2 block font-mono text-[11px]" style={{ color: "rgba(230,231,232,0.5)" }}>
-                  background-clip: text
+                  linear-gradient(90deg, #1a1a8e, #2E2EFE, #3245FD, #5a6eff)
+                  {"\n"}background-clip: text
                 </code>
               </div>
             </div>
