@@ -1,13 +1,11 @@
 import SectionWrapper from "../miv/SectionWrapper";
-import ImagePlaceholder from "../miv/ImagePlaceholder";
 import { X } from "lucide-react";
 
-const logoVersions = [
-  { title: "Versão Preferencial", label: "Logo completo — azul", sub: "SVG ou PNG transparente", ar: "3/1", bg: undefined },
-  { title: "Versão Ícone", label: "Logo símbolo i/o — azul", sub: "SVG ou PNG transparente", ar: "1/1", bg: undefined },
-  { title: "Versão Monocromática Branca", label: "Logo monocromático branco", sub: "PNG transparente", ar: "3/1", bg: undefined },
-  { title: "Versão Monocromática Escura", label: "Logo monocromático escuro", sub: "PNG transparente", ar: "3/1", bg: "#E6E7E8" },
-];
+import logoPrincipal from "@/assets/logo-principal.svg";
+import logoColoridoVertical from "@/assets/logo-colorido-vertical.svg";
+import logoSimbolo from "@/assets/logo-simbolo.svg";
+import logoMonoBranca from "@/assets/logo-mono-branca.svg";
+import logoNegativo from "@/assets/logo-negativo.svg";
 
 const incorrectUses = [
   "Alterar as cores do logo",
