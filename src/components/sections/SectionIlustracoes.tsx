@@ -65,11 +65,21 @@ const SectionIlustracoes = () => {
                 </li>
               ))}
             </ul>
-            <div className="grid grid-cols-2 gap-4">
-              {cat.placeholders.map((p, i) => (
-                <ImagePlaceholder key={i} label={p} sublabel="1080 × 1350px" aspectRatio="4/5" />
-              ))}
-            </div>
+            {cat.images ? (
+              <div className="grid grid-cols-3 gap-4">
+                {cat.images.map((img, i) => (
+                  <div key={i} className="rounded-xl overflow-hidden" style={{ aspectRatio: "4/5" }}>
+                    <img src={img.src} alt={img.alt} className="w-full h-full object-cover" />
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <div className="grid grid-cols-2 gap-4">
+                {cat.placeholders.map((p, i) => (
+                  <ImagePlaceholder key={i} label={p} sublabel="1080 × 1350px" aspectRatio="4/5" />
+                ))}
+              </div>
+            )}
           </div>
         ))}
 
