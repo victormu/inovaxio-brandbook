@@ -3,6 +3,9 @@ import ImagePlaceholder from "../miv/ImagePlaceholder";
 import bg1 from "@/assets/bg1.png";
 import bg2 from "@/assets/bg2.png";
 import bg3 from "@/assets/bg3.png";
+import obj1 from "@/assets/obj1.png";
+import obj2 from "@/assets/obj2.png";
+import obj3 from "@/assets/obj3.png";
 
 const SectionElementosVisuais = () => {
   return (
