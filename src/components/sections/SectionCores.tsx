@@ -99,7 +99,7 @@ const SectionCores = () => {
                 <span
                   className="font-inter text-2xl md:text-3xl font-black"
                   style={{
-                    background: "linear-gradient(90deg, #1a1a8e, #2E2EFE 40%, #3245FD 70%, #5a6eff)",
+                    background: "linear-gradient(90deg, #3b3d8e 0%, #4a4cc8 30%, #5555f0 55%, #6366ff 100%)",
                     WebkitBackgroundClip: "text",
                     WebkitTextFillColor: "transparent",
                     backgroundClip: "text",
