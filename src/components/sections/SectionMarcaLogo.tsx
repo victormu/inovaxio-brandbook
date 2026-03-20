@@ -1,12 +1,44 @@
 import SectionWrapper from "../miv/SectionWrapper";
-import ImagePlaceholder from "../miv/ImagePlaceholder";
 import { X } from "lucide-react";
 
+import logoColoridoHorizontal from "@/assets/logos/inovaxio-colorido-horizontal.svg";
+import logoColoridoVertical from "@/assets/logos/inovaxio-colorido-vertical.svg";
+import logoBrancoHorizontal from "@/assets/logos/inovaxio-branco-horizontal.svg";
+import logoBrancoVertical from "@/assets/logos/inovaxio-branco-vertical.svg";
+import logoEscuroHorizontal from "@/assets/logos/inovaxio-escuro-horizontal.svg";
+import logoEscuroVertical from "@/assets/logos/inovaxio-escuro-vertical.svg";
+
 const logoVersions = [
-  { title: "Versão Preferencial", label: "Logo completo — azul", sub: "SVG ou PNG transparente", ar: "3/1", bg: undefined },
-  { title: "Versão Ícone", label: "Logo símbolo i/o — azul", sub: "SVG ou PNG transparente", ar: "1/1", bg: undefined },
-  { title: "Versão Monocromática Branca", label: "Logo monocromático branco", sub: "PNG transparente", ar: "3/1", bg: undefined },
-  { title: "Versão Monocromática Escura", label: "Logo monocromático escuro", sub: "PNG transparente", ar: "3/1", bg: "#E6E7E8" },
+  {
+    title: "Versão Preferencial — Colorida Horizontal",
+    img: logoColoridoHorizontal,
+    bg: "#ffffff",
+  },
+  {
+    title: "Versão Preferencial — Colorida Vertical",
+    img: logoColoridoVertical,
+    bg: "#ffffff",
+  },
+  {
+    title: "Versão Branca — Horizontal",
+    img: logoBrancoHorizontal,
+    bg: "#1A1820",
+  },
+  {
+    title: "Versão Branca — Vertical",
+    img: logoBrancoVertical,
+    bg: "#1A1820",
+  },
+  {
+    title: "Versão Monocromática Escura — Horizontal",
+    img: logoEscuroHorizontal,
+    bg: "#E6E7E8",
+  },
+  {
+    title: "Versão Monocromática Escura — Vertical",
+    img: logoEscuroVertical,
+    bg: "#E6E7E8",
+  },
 ];
 
 const incorrectUses = [
@@ -31,14 +63,21 @@ const SectionMarcaLogo = () => {
         </div>
 
         {/* Logo versions */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {logoVersions.map(v => (
             <div key={v.title} className="glass-card p-5 flex flex-col gap-3">
               <span className="font-inter text-xs font-semibold uppercase tracking-widest" style={{ color: "#2E2EFE" }}>
                 {v.title}
               </span>
-              <div style={v.bg ? { backgroundColor: v.bg, borderRadius: 12 } : undefined}>
-                <ImagePlaceholder label={v.label} sublabel={v.sub} aspectRatio={v.ar} />
+              <div
+                className="flex items-center justify-center rounded-xl p-6"
+                style={{ backgroundColor: v.bg }}
+              >
+                <img
+                  src={v.img}
+                  alt={v.title}
+                  className="w-full max-w-[200px] h-auto object-contain"
+                />
               </div>
             </div>
           ))}
@@ -59,10 +98,9 @@ const SectionMarcaLogo = () => {
                 borderRadius: 8,
               }}
             >
-              <div className="flex items-center justify-center rounded-md" style={{ width: 160, height: 56, border: "1px solid rgba(255,255,255,0.15)" }}>
-                <span className="font-inter font-bold text-sm" style={{ color: "#2E2EFE" }}>INOVAXIO i/o</span>
+              <div className="flex items-center justify-center rounded-md p-2" style={{ width: 160, height: 56, border: "1px solid rgba(255,255,255,0.15)" }}>
+                <img src={logoBrancoHorizontal} alt="Logo referência" className="h-full w-auto object-contain" />
               </div>
-              {/* X labels */}
               <span className="absolute top-1 left-1/2 -translate-x-1/2 font-inter text-[10px] font-semibold" style={{ color: "#2E2EFE" }}>1X</span>
               <span className="absolute bottom-1 left-1/2 -translate-x-1/2 font-inter text-[10px] font-semibold" style={{ color: "#2E2EFE" }}>1X</span>
               <span className="absolute left-1 top-1/2 -translate-y-1/2 font-inter text-[10px] font-semibold" style={{ color: "#2E2EFE" }}>1X</span>
