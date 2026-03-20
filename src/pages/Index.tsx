@@ -22,10 +22,6 @@ const TopBar = () => (
     }}
   >
     <div className="flex items-center gap-3">
-      {/* Small logo placeholder */}
-      <div className="flex items-center justify-center rounded-md overflow-hidden" style={{ width: 32, height: 32 }}>
-        <img src={logoSimbolo} alt="Inovaxio" className="w-full h-full object-contain" />
-      </div>
       <span className="font-inter text-sm font-semibold text-white hidden sm:inline">INOVAXIO</span>
     </div>
     <div className="flex items-center gap-3">
