@@ -34,7 +34,12 @@ const categories = [
       "Evitar ilustrações flat ou com cores fora da paleta",
       "Evitar fotografias realistas de pessoas",
     ],
-    placeholders: ["Exemplo — Ilustração conceitual", "Exemplo — Ilustração conceitual"],
+    images: [
+      { src: ilus1, alt: "Ilustração — Parceria" },
+      { src: ilus2, alt: "Ilustração — Interface digital" },
+      { src: ilus3, alt: "Ilustração — Conexão e negócios" },
+    ],
+    placeholders: [],
   },
 ];
 
