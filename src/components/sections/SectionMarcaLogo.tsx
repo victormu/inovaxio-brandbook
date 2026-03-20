@@ -1,12 +1,20 @@
 import SectionWrapper from "../miv/SectionWrapper";
-import ImagePlaceholder from "../miv/ImagePlaceholder";
 import { X } from "lucide-react";
 
+import logoColoridoH from "@/assets/logos/inovaxio-colorido-horizontal.svg";
+import logoColoridoV from "@/assets/logos/inovaxio-colorido-vertical.svg";
+import logoBrancoH from "@/assets/logos/inovaxio-branco-horizontal.svg";
+import logoBrancoV from "@/assets/logos/inovaxio-branco-vertical.svg";
+import logoPretaH from "@/assets/logos/inovaxio-preta-horizontal.svg";
+import logoPretaV from "@/assets/logos/inovaxio-preta-vertical.svg";
+
 const logoVersions = [
-  { title: "Versão Preferencial", label: "Logo completo — azul", sub: "SVG ou PNG transparente", ar: "3/1", bg: undefined },
-  { title: "Versão Ícone", label: "Logo símbolo i/o — azul", sub: "SVG ou PNG transparente", ar: "1/1", bg: undefined },
-  { title: "Versão Monocromática Branca", label: "Logo monocromático branco", sub: "PNG transparente", ar: "3/1", bg: undefined },
-  { title: "Versão Monocromática Escura", label: "Logo monocromático escuro", sub: "PNG transparente", ar: "3/1", bg: "#E6E7E8" },
+  { title: "Versão Preferencial — Colorida Horizontal", img: logoColoridoH, ar: "1/1", bg: undefined },
+  { title: "Versão Preferencial — Colorida Vertical", img: logoColoridoV, ar: "1/1", bg: undefined },
+  { title: "Versão Monocromática Branca — Horizontal", img: logoBrancoH, ar: "1/1", bg: undefined },
+  { title: "Versão Monocromática Branca — Vertical", img: logoBrancoV, ar: "1/1", bg: undefined },
+  { title: "Versão Monocromática Escura — Horizontal", img: logoPretaH, ar: "1/1", bg: "#E6E7E8" },
+  { title: "Versão Monocromática Escura — Vertical", img: logoPretaV, ar: "1/1", bg: "#E6E7E8" },
 ];
 
 const incorrectUses = [
