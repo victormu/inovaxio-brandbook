@@ -97,11 +97,13 @@ const SectionCores = () => {
             <div className="glass-card overflow-hidden">
               <div className="flex h-28 items-center justify-center px-6" style={{ borderRadius: "16px 16px 0 0", background: "rgba(255,255,255,0.02)" }}>
                 <span
-                  className="font-quicksand text-2xl md:text-3xl font-bold"
+                  className="inline-block font-quicksand text-2xl font-bold md:text-3xl"
                   style={{
-                    background: "linear-gradient(90deg, #6366ff 0%, #5555f0 30%, #4a4cc8 60%, #3b3d8e 100%)",
+                    backgroundImage: "linear-gradient(90deg, #6366ff 0%, #5555f0 30%, #4a4cc8 60%, #3b3d8e 100%)",
+                    backgroundClip: "text",
                     WebkitBackgroundClip: "text",
                     color: "transparent",
+                    WebkitTextFillColor: "transparent",
                   }}
                 >
                   Seus Sistemas.
