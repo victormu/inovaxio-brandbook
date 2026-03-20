@@ -3,6 +3,7 @@ import logoSimbolo from "@/assets/logo-simbolo-branco.svg";
 import BackToTop from "@/components/miv/BackToTop";
 import SectionIntroducao from "@/components/sections/SectionIntroducao";
 import SectionMarcaLogo from "@/components/sections/SectionMarcaLogo";
+import SectionConstrucaoSimbolo from "@/components/sections/SectionConstrucaoSimbolo";
 import SectionCores from "@/components/sections/SectionCores";
 import SectionTipografia from "@/components/sections/SectionTipografia";
 import SectionElementosVisuais from "@/components/sections/SectionElementosVisuais";
