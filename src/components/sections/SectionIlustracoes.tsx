@@ -1,6 +1,9 @@
 import SectionWrapper from "../miv/SectionWrapper";
 import ImagePlaceholder from "../miv/ImagePlaceholder";
 import { Check, X } from "lucide-react";
+import obj1 from "@/assets/obj1.png";
+import obj2 from "@/assets/obj2.png";
+import obj3 from "@/assets/obj3.png";
 
 const categories = [
   {
