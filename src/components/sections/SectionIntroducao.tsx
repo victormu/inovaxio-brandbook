@@ -6,7 +6,7 @@ const SectionIntroducao = () => {
       <div className="flex flex-col gap-8">
         {/* Hero */}
         <div>
-          <h1 className="font-quicksand font-bold text-6xl md:text-8xl tracking-tight leading-none text-gradient">
+          <h1 className="font-quicksand font-bold text-6xl md:text-8xl leading-none text-gradient" style={{ letterSpacing: "-0.04em" }}>
             INOVAXIO
           </h1>
           <p className="mt-4 font-inter text-xl md:text-2xl font-light" style={{ color: "var(--brand-text-secondary)" }}>
