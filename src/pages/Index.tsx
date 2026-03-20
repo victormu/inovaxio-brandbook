@@ -1,5 +1,5 @@
 import MivSidebar from "@/components/miv/MivSidebar";
-import logoSimbolo from "@/assets/logo-simbolo.svg";
+import logoSimbolo from "@/assets/logo-simbolo-branco.svg";
 import BackToTop from "@/components/miv/BackToTop";
 import SectionIntroducao from "@/components/sections/SectionIntroducao";
 import SectionMarcaLogo from "@/components/sections/SectionMarcaLogo";
