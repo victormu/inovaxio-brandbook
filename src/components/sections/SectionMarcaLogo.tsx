@@ -39,14 +39,20 @@ const SectionMarcaLogo = () => {
         </div>
 
         {/* Logo versions */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {logoVersions.map(v => (
             <div key={v.title} className="glass-card p-5 flex flex-col gap-3">
               <span className="font-inter text-xs font-semibold uppercase tracking-widest" style={{ color: "#2E2EFE" }}>
                 {v.title}
               </span>
-              <div style={v.bg ? { backgroundColor: v.bg, borderRadius: 12 } : undefined}>
-                <ImagePlaceholder label={v.label} sublabel={v.sub} aspectRatio={v.ar} />
+              <div
+                className="flex items-center justify-center rounded-xl p-6"
+                style={{
+                  backgroundColor: v.bg || "#1A1820",
+                  aspectRatio: v.ar,
+                }}
+              >
+                <img src={v.img} alt={v.title} className="w-full h-full object-contain" />
               </div>
             </div>
           ))}
