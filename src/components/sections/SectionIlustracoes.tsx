@@ -15,17 +15,6 @@ const categories = [
     placeholders: ["Exemplo — Objeto 3D em uso", "Exemplo — Objeto 3D em uso"],
   },
   {
-    title: "Renders de Interface",
-    desc: "Telas, janelas de browser e elementos de UI renderizados em 3D ou com tratamento glassmorphism. Representam os produtos digitais que a Inovaxio entrega.",
-    rules: [
-      "Sempre em perspectiva ou flutuando (nunca flat/estático)",
-      "Reflexo sutil de luz azul nas bordas",
-      "Podem ser empilhados ou sobrepostos para criar profundidade",
-      "Usar como elemento hero, nunca como fundo",
-    ],
-    placeholders: ["Exemplo — Interface em uso", "Exemplo — Interface em uso"],
-  },
-  {
     title: "Ilustrações Conceituais",
     desc: "Composições visuais que traduzem conceitos abstratos em imagem — conexão, crescimento, processo, parceria. Usadas quando não há um objeto tecnológico direto para ilustrar.",
     rules: [
