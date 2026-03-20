@@ -2,13 +2,13 @@ import { useState } from "react";
 import SectionWrapper from "../miv/SectionWrapper";
 
 const interWeights = [
-  { label: "Display (900)", weight: 900, size: "text-5xl md:text-6xl", text: "Transformamos ideias em realidade digital." },
-  { label: "H1 (700)", weight: 700, size: "text-3xl md:text-4xl", text: "Precisa de um parceiro que entenda do seu negócio." },
-  { label: "H2 (600)", weight: 600, size: "text-2xl md:text-[28px]", text: "Sem jargão, sem surpresas." },
-  { label: "H3 (500)", weight: 500, size: "text-xl", text: "Com IA, seu time foca no que importa." },
-  { label: "Body (400)", weight: 400, size: "text-base", text: "Antes de qualquer contrato, você já enxerga o seu projeto ganhando forma." },
-  { label: "Caption (400)", weight: 400, size: "text-[13px]", text: "#inovaxio_solutions" },
-];
+{ label: "Display (900)", weight: 900, size: "text-5xl md:text-6xl", text: "Transformamos ideias em realidade digital." },
+{ label: "H1 (700)", weight: 700, size: "text-3xl md:text-4xl", text: "Precisa de um parceiro que entenda do seu negócio." },
+{ label: "H2 (600)", weight: 600, size: "text-2xl md:text-[28px]", text: "Sem jargão, sem surpresas." },
+{ label: "H3 (500)", weight: 500, size: "text-xl", text: "Com IA, seu time foca no que importa." },
+{ label: "Body (400)", weight: 400, size: "text-base", text: "Antes de qualquer contrato, você já enxerga o seu projeto ganhando forma." },
+{ label: "Caption (400)", weight: 400, size: "text-[13px]", text: "#inovaxio_solutions" }];
+
 
 const SectionTipografia = () => {
   const [liveText, setLiveText] = useState("Digite aqui para testar a tipografia...");
@@ -26,7 +26,7 @@ const SectionTipografia = () => {
         {/* Quicksand */}
         <div className="glass-card p-8">
           <div className="flex items-center gap-3 mb-4">
-            <h3 className="font-quicksand font-bold text-2xl text-white">Quicksand</h3>
+            <h3 className="font-quicksand font-bold text-white text-8xl">Quicksand</h3>
             <span className="rounded-full px-3 py-1 text-[11px] font-semibold" style={{ background: "rgba(46,46,254,0.15)", color: "#2E2EFE" }}>
               Fonte Institucional
             </span>
@@ -58,8 +58,8 @@ const SectionTipografia = () => {
 
           {/* Hierarchy */}
           <div className="space-y-6 mb-8">
-            {interWeights.map(w => (
-              <div key={w.label} className="flex flex-col gap-1">
+            {interWeights.map((w) =>
+            <div key={w.label} className="flex flex-col gap-1">
                 <span className="font-inter text-[11px] font-semibold uppercase tracking-widest" style={{ color: "#2E2EFE" }}>
                   {w.label}
                 </span>
@@ -67,7 +67,7 @@ const SectionTipografia = () => {
                   {w.text}
                 </p>
               </div>
-            ))}
+            )}
           </div>
 
           {/* Live text editor */}
@@ -78,17 +78,17 @@ const SectionTipografia = () => {
             <input
               type="text"
               value={liveText}
-              onChange={e => setLiveText(e.target.value)}
+              onChange={(e) => setLiveText(e.target.value)}
               className="w-full rounded-xl border-0 px-4 py-3 font-inter text-sm text-white outline-none focus:ring-1 focus:ring-[#2E2EFE]"
-              style={{ background: "rgba(255,255,255,0.05)" }}
-            />
+              style={{ background: "rgba(255,255,255,0.05)" }} />
+            
             <div className="mt-4 space-y-2">
-              {[900, 700, 600, 500, 400, 300].map(w => (
-                <p key={w} className="font-inter text-lg text-white" style={{ fontWeight: w }}>
+              {[900, 700, 600, 500, 400, 300].map((w) =>
+              <p key={w} className="font-inter text-lg text-white" style={{ fontWeight: w }}>
                   <span className="inline-block w-8 text-[10px] font-semibold tabular-nums" style={{ color: "rgba(230,231,232,0.3)" }}>{w}</span>
                   {liveText}
                 </p>
-              ))}
+              )}
             </div>
           </div>
         </div>
@@ -101,8 +101,8 @@ const SectionTipografia = () => {
           </p>
         </div>
       </div>
-    </SectionWrapper>
-  );
+    </SectionWrapper>);
+
 };
 
 export default SectionTipografia;
