@@ -4,6 +4,9 @@ import { Check, X } from "lucide-react";
 import obj1 from "@/assets/obj1.png";
 import obj2 from "@/assets/obj2.png";
 import obj3 from "@/assets/obj3.png";
+import ilus1 from "@/assets/ilus1.png";
+import ilus2 from "@/assets/ilus2.png";
+import ilus3 from "@/assets/ilus3.png";
 
 const categories = [
   {
@@ -31,7 +34,12 @@ const categories = [
       "Evitar ilustrações flat ou com cores fora da paleta",
       "Evitar fotografias realistas de pessoas",
     ],
-    placeholders: ["Exemplo — Ilustração conceitual", "Exemplo — Ilustração conceitual"],
+    images: [
+      { src: ilus1, alt: "Ilustração — Parceria" },
+      { src: ilus2, alt: "Ilustração — Interface digital" },
+      { src: ilus3, alt: "Ilustração — Conexão e negócios" },
+    ],
+    placeholders: [],
   },
 ];
 
