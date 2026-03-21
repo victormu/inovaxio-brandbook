@@ -1,6 +1,7 @@
 import MivSidebar from "@/components/miv/MivSidebar";
 import logoSimbolo from "@/assets/logo-simbolo-branco.svg";
 import BackToTop from "@/components/miv/BackToTop";
+import SectionHero from "@/components/sections/SectionHero";
 import SectionIntroducao from "@/components/sections/SectionIntroducao";
 import SectionMarcaLogo from "@/components/sections/SectionMarcaLogo";
 import SectionConstrucaoSimbolo from "@/components/sections/SectionConstrucaoSimbolo";
@@ -47,6 +48,7 @@ const Index = () => {
       <MivSidebar />
       <TopBar />
       <main className="lg:ml-[240px] pt-14">
+        <SectionHero />
         <SectionIntroducao />
         <SectionMarcaLogo />
         <SectionConstrucaoSimbolo />
