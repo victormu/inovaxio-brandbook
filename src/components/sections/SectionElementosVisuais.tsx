@@ -95,7 +95,7 @@ backdrop-filter: blur(12px);`}
               </div>
             </div>
             <div className="glass-card p-6 flex flex-col items-center gap-4">
-              <div className="h-20 w-20 rounded-2xl" style={{ background: "rgba(0,229,255,0.04)", border: "1px solid rgba(0,229,255,0.6)", boxShadow: "0 0 30px 8px rgba(0,229,255,0.25), 0 0 60px 15px rgba(0,229,255,0.10)" }} />
+              <div className="h-28 w-28 rounded-3xl" style={{ background: "transparent", border: "2px solid rgba(0,229,255,0.7)", boxShadow: "0 0 20px 6px rgba(0,229,255,0.3), 0 0 50px 15px rgba(0,229,255,0.15), inset 0 0 15px 2px rgba(0,229,255,0.08)" }} />
               <div className="text-center">
                 <p className="font-inter text-sm font-semibold text-white">Glow de Borda</p>
                 <code className="font-mono text-[10px]" style={{ color: "rgba(230,231,232,0.4)" }}>border: 1px solid rgba(0,229,255,0.6)</code>
