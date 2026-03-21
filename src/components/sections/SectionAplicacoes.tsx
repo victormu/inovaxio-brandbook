@@ -52,13 +52,6 @@ const SectionAplicacoes = () => {
           </div>
         </div>
 
-        {/* Envelope / Papelaria */}
-        <div className="glass-card p-6 md:p-8">
-          <span className="font-inter text-xs font-semibold uppercase tracking-widest" style={{ color: "#2E2EFE" }}>Envelope / Papelaria</span>
-          <div className="mt-4 max-w-lg">
-            <ImagePlaceholder label="Mockup — Papelaria / Envelope" sublabel="PNG ou JPG" aspectRatio="4/3" />
-          </div>
-        </div>
       </div>
     </SectionWrapper>);
 
