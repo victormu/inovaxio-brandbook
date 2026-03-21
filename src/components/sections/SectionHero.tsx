@@ -3,18 +3,18 @@ import logoPrincipal from "@/assets/logo-mono-branca.svg";
 
 const SectionHero = () => {
   return (
-    <section className="relative flex min-h-[85vh] flex-col items-center justify-center overflow-hidden px-6 py-24 text-center">
+    <section className="relative flex min-h-[85vh] flex-col items-start justify-center overflow-hidden px-6 md:px-16 lg:px-24 py-24 text-left">
       {/* Glow background */}
       <div
         className="pointer-events-none absolute inset-0"
         style={{
           background:
-            "radial-gradient(ellipse at 50% 40%, rgba(46,46,254,0.18) 0%, transparent 65%)",
+            "radial-gradient(ellipse at 20% 40%, rgba(46,46,254,0.18) 0%, transparent 65%)",
         }}
       />
 
       <motion.div
-        className="relative z-10 flex flex-col items-center gap-8 max-w-3xl"
+        className="relative z-10 flex flex-col items-start gap-8 max-w-3xl"
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
