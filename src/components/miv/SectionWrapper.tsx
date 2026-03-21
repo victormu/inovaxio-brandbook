@@ -9,7 +9,7 @@ interface SectionWrapperProps {
 
 const SectionWrapper = ({ id, chapterNum, children, className = "" }: SectionWrapperProps) => {
   return (
-    <section id={id} className={`relative min-h-screen px-6 py-20 md:px-12 lg:px-16 ${className}`}>
+    <section id={id} className={`relative px-6 py-16 md:px-12 md:py-20 lg:px-16 ${className}`}>
       {/* Faded chapter number */}
       <span
         className="pointer-events-none absolute right-8 top-12 select-none font-inter text-[180px] font-black leading-none md:text-[240px]"
