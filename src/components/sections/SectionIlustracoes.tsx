@@ -7,6 +7,8 @@ import obj3 from "@/assets/obj3.png";
 import ilus1 from "@/assets/ilus1.png";
 import ilus2 from "@/assets/ilus2.png";
 import ilus3 from "@/assets/ilus3.png";
+import elementoMaos from "@/assets/elemento-maos.png";
+import elementoPessoa from "@/assets/elemento-pessoa.png";
 
 const categories = [
   {
@@ -23,7 +25,6 @@ const categories = [
       { src: obj2, alt: "Objeto 3D — Cubos metálicos" },
       { src: obj3, alt: "Objeto 3D — Painéis de vidro" },
     ],
-    placeholders: [],
   },
   {
     title: "Ilustrações Conceituais",
@@ -39,7 +40,27 @@ const categories = [
       { src: ilus2, alt: "Ilustração — Interface digital" },
       { src: ilus3, alt: "Ilustração — Conexão e negócios" },
     ],
-    placeholders: [],
+  },
+];
+
+const elementos = [
+  {
+    title: "Mãos",
+    desc: "Representam parceria, confiança e negociação. Sempre em estilo 3D monocromático azul, sem traços realistas.",
+    src: elementoMaos,
+    alt: "Elemento — Mãos",
+  },
+  {
+    title: "Pessoas",
+    desc: "Figuras humanas abstratas, sem aspectos faciais definidos. Transmitem profissionalismo e autoridade de forma universal.",
+    src: elementoPessoa,
+    alt: "Elemento — Pessoa",
+  },
+  {
+    title: "Esfera",
+    desc: "Representa globalidade, inovação e completude. Elemento central da linguagem visual da marca.",
+    src: null as string | null,
+    alt: "Elemento — Esfera",
   },
 ];
 
@@ -77,23 +98,43 @@ const SectionIlustracoes = () => {
                 </li>
               ))}
             </ul>
-            {cat.images ? (
-              <div className="grid grid-cols-3 gap-4">
-                {cat.images.map((img, i) => (
-                  <div key={i} className="rounded-xl overflow-hidden" style={{ aspectRatio: "4/5" }}>
-                    <img src={img.src} alt={img.alt} className="w-full h-full object-cover" />
-                  </div>
-                ))}
-              </div>
-            ) : (
-              <div className="grid grid-cols-2 gap-4">
-                {cat.placeholders.map((p, i) => (
-                  <ImagePlaceholder key={i} label={p} sublabel="1080 × 1350px" aspectRatio="4/5" />
-                ))}
-              </div>
-            )}
+            <div className="grid grid-cols-3 gap-4">
+              {cat.images.map((img, i) => (
+                <div key={i} className="rounded-xl overflow-hidden" style={{ aspectRatio: "4/5" }}>
+                  <img src={img.src} alt={img.alt} className="w-full h-full object-cover" />
+                </div>
+              ))}
+            </div>
           </div>
         ))}
+
+        {/* Elementos-chave das Ilustrações */}
+        <div className="glass-card p-6 md:p-8">
+          <span className="font-inter text-[11px] font-semibold uppercase tracking-widest" style={{ color: "#2E2EFE" }}>
+            Elementos-Chave
+          </span>
+          <h3 className="font-inter font-semibold text-xl text-white mt-2 mb-2">Elementos das Ilustrações</h3>
+          <p className="font-inter text-sm mb-6" style={{ color: "var(--brand-text-secondary)" }}>
+            As ilustrações da Inovaxio utilizam 3 elementos-chave recorrentes que reforçam a identidade visual e a narrativa da marca.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {elementos.map((el, i) => (
+              <div key={i} className="flex flex-col items-center gap-4">
+                <div className="rounded-xl overflow-hidden w-full" style={{ aspectRatio: "1/1" }}>
+                  {el.src ? (
+                    <img src={el.src} alt={el.alt} className="w-full h-full object-cover" />
+                  ) : (
+                    <ImagePlaceholder label={el.title} sublabel="Próximo envio" aspectRatio="1/1" className="w-full h-full" />
+                  )}
+                </div>
+                <div className="text-center">
+                  <h4 className="font-inter font-semibold text-white text-base mb-1">{el.title}</h4>
+                  <p className="font-inter text-[13px]" style={{ color: "var(--brand-text-secondary)" }}>{el.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
 
         {/* Do / Don't */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
