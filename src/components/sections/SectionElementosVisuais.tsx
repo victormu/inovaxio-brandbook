@@ -111,23 +111,6 @@ backdrop-filter: blur(12px);`}
           </div>
         </div>
 
-        {/* 5.5 Padrão de Marca */}
-        <div>
-          <h3 className="font-inter font-semibold text-lg text-white mb-4">5.5 Padrão de Marca</h3>
-          <div
-            className="relative h-[200px] w-full max-w-[400px] overflow-hidden rounded-xl"
-            style={{ background: "rgba(255,255,255,0.02)", border: "1px solid rgba(255,255,255,0.06)" }}
-          >
-            <div
-              className="absolute inset-0 flex flex-wrap items-center justify-center gap-4 font-inter font-bold text-lg"
-              style={{ color: "#2E2EFE", opacity: 0.08, transform: "rotate(-15deg) scale(1.4)" }}
-            >
-              {Array.from({ length: 40 }).map((_, i) => (
-                <span key={i} className="whitespace-nowrap">i/o</span>
-              ))}
-            </div>
-          </div>
-        </div>
 
         {/* 5.6 CTA Button */}
         <div>
