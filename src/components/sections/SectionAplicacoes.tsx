@@ -1,6 +1,7 @@
 import SectionWrapper from "../miv/SectionWrapper";
 import ImagePlaceholder from "../miv/ImagePlaceholder";
 import postExemplo from "@/assets/post-exemplo.png";
+import cartaoVisita from "@/assets/cartao-visita.png";
 import comercialCapa from "@/assets/comercial-capa.png";
 import comercialConteudo from "@/assets/comercial-conteudo.png";
 
