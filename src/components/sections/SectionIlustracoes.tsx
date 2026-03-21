@@ -9,6 +9,7 @@ import ilus2 from "@/assets/ilus2.png";
 import ilus3 from "@/assets/ilus3.png";
 import elementoMaos from "@/assets/elemento-maos.png";
 import elementoPessoa from "@/assets/elemento-pessoa.png";
+import elementoEsfera from "@/assets/elemento-esfera.png";
 
 const categories = [
   {
@@ -59,7 +60,7 @@ const elementos = [
   {
     title: "Esfera",
     desc: "Representa globalidade, inovação e completude. Elemento central da linguagem visual da marca.",
-    src: null as string | null,
+    src: elementoEsfera,
     alt: "Elemento — Esfera",
   },
 ];
