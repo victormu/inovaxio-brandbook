@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 interface SectionWrapperProps {
   id: string;
   chapterNum: string;
@@ -15,7 +17,15 @@ const SectionWrapper = ({ id, chapterNum, children, className = "" }: SectionWra
       >
         {chapterNum}
       </span>
-      <div className="relative z-10 max-w-5xl">{children}</div>
+      <motion.div
+        className="relative z-10 max-w-5xl"
+        initial={{ opacity: 0, y: 32 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-80px" }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+      >
+        {children}
+      </motion.div>
     </section>
   );
 };

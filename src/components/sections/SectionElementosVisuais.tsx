@@ -1,11 +1,12 @@
 import SectionWrapper from "../miv/SectionWrapper";
 import ImagePlaceholder from "../miv/ImagePlaceholder";
-import bg1 from "@/assets/bg1.png";
-import bg2 from "@/assets/bg2.png";
-import bg3 from "@/assets/bg3.png";
-import obj1 from "@/assets/obj1.png";
-import obj2 from "@/assets/obj2.png";
-import obj3 from "@/assets/obj3.png";
+import { FadeUp, StaggerContainer, StaggerItem, ScaleIn } from "../miv/AnimatedSection";
+import bg1 from "@/assets/bg1.png?format=webp&quality=80";
+import bg2 from "@/assets/bg2.png?format=webp&quality=80";
+import bg3 from "@/assets/bg3.png?format=webp&quality=80";
+import obj1 from "@/assets/obj1.png?format=webp&quality=80";
+import obj2 from "@/assets/obj2.png?format=webp&quality=80";
+import obj3 from "@/assets/obj3.png?format=webp&quality=80";
 
 const SectionElementosVisuais = () => {
   return (
@@ -21,86 +22,88 @@ const SectionElementosVisuais = () => {
         {/* 5.1 Gradientes Lúdicos */}
         <div>
           <h3 className="font-inter font-semibold text-lg text-white mb-1">5.1 Gradientes Lúdicos</h3>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-4">
+          <StaggerContainer className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-4">
             {[
               { label: "Tipo A", img: bg1, code: "Gradiente escuro sutil com glow inferior" },
               { label: "Tipo B", img: bg2, code: "Gradiente deep blue com accent roxo" },
               { label: "Tipo C", img: bg3, code: "Gradiente dark com glow azul orgânico" },
             ].map((item) => (
-              <div key={item.label} className="glass-card p-4 flex flex-col gap-3">
+              <StaggerItem key={item.label} className="glass-card p-4 flex flex-col gap-3">
                 <div className="rounded-xl overflow-hidden" style={{ aspectRatio: "4/5" }}>
-                  <img src={item.img} alt={`Gradiente ${item.label}`} className="w-full h-full object-cover" />
+                  <img src={item.img} alt={`Gradiente ${item.label}`} className="w-full h-full object-cover" loading="lazy" />
                 </div>
                 <code className="font-mono text-[11px] p-2 rounded-lg block" style={{ background: "rgba(0,0,0,0.3)", color: "rgba(230,231,232,0.5)" }}>
                   {item.code}
                 </code>
-              </div>
+              </StaggerItem>
             ))}
-          </div>
+          </StaggerContainer>
         </div>
 
         {/* 5.2 Glassmorphism */}
-        <div>
-          <h3 className="font-inter font-semibold text-lg text-white mb-4">5.2 Glassmorphism</h3>
-          <div className="relative p-8 rounded-2xl" style={{ background: "radial-gradient(ellipse at 30% 50%, rgba(46,46,254,0.2), transparent 70%)" }}>
-            <div className="glass-card-strong p-8">
-              <p className="font-inter text-white text-lg font-semibold mb-2">Exemplo de Glassmorphism</p>
-              <p className="font-inter text-sm" style={{ color: "var(--brand-text-secondary)" }}>
-                Superfície translúcida com desfoque de fundo.
-              </p>
+        <FadeUp>
+          <div>
+            <h3 className="font-inter font-semibold text-lg text-white mb-4">5.2 Glassmorphism</h3>
+            <div className="relative p-8 rounded-2xl" style={{ background: "radial-gradient(ellipse at 30% 50%, rgba(46,46,254,0.2), transparent 70%)" }}>
+              <div className="glass-card-strong p-8">
+                <p className="font-inter text-white text-lg font-semibold mb-2">Exemplo de Glassmorphism</p>
+                <p className="font-inter text-sm" style={{ color: "var(--brand-text-secondary)" }}>
+                  Superfície translúcida com desfoque de fundo.
+                </p>
+              </div>
             </div>
-          </div>
-          <code className="font-mono text-[11px] mt-3 p-3 rounded-lg block" style={{ background: "rgba(0,0,0,0.3)", color: "rgba(230,231,232,0.5)" }}>
+            <code className="font-mono text-[11px] mt-3 p-3 rounded-lg block" style={{ background: "rgba(0,0,0,0.3)", color: "rgba(230,231,232,0.5)" }}>
 {`background: rgba(255,255,255,0.06);
 border: 1px solid rgba(255,255,255,0.10);
 border-radius: 16px;
 backdrop-filter: blur(12px);`}
-          </code>
-        </div>
-
+            </code>
+          </div>
+        </FadeUp>
 
         {/* 5.3 Glows */}
         <div>
           <h3 className="font-inter font-semibold text-lg text-white mb-4">5.3 Glows e Brilhos</h3>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-            <div className="glass-card p-6 flex flex-col items-center gap-4">
+          <StaggerContainer className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <StaggerItem className="glass-card p-6 flex flex-col items-center gap-4">
               <div className="h-20 w-20 rounded-2xl" style={{ background: "#2E2EFE", boxShadow: "0 0 80px 20px rgba(46,46,254,0.45)" }} />
               <div className="text-center">
                 <p className="font-inter text-sm font-semibold text-white">Glow Principal</p>
                 <code className="font-mono text-[10px]" style={{ color: "rgba(230,231,232,0.4)" }}>box-shadow: 0 0 80px 20px rgba(46,46,254,0.45)</code>
               </div>
-            </div>
-            <div className="glass-card p-6 flex flex-col items-center gap-4">
+            </StaggerItem>
+            <StaggerItem className="glass-card p-6 flex flex-col items-center gap-4">
               <div className="h-20 w-20 rounded-2xl" style={{ background: "rgba(46,46,254,0.04)", border: "1px solid rgba(46,46,254,0.6)", boxShadow: "0 0 30px 8px rgba(46,46,254,0.25), 0 0 60px 15px rgba(46,46,254,0.10)" }} />
               <div className="text-center">
                 <p className="font-inter text-sm font-semibold text-white">Glow de Borda</p>
                 <code className="font-mono text-[10px]" style={{ color: "rgba(230,231,232,0.4)" }}>border: 1px solid rgba(46,46,254,0.6)</code>
               </div>
-            </div>
-            <div className="glass-card p-6 flex flex-col items-center gap-4">
+            </StaggerItem>
+            <StaggerItem className="glass-card p-6 flex flex-col items-center gap-4">
               <div className="h-20 w-20 rounded-2xl" style={{ background: "rgba(50,69,253,0.15)" }} />
               <div className="text-center">
                 <p className="font-inter text-sm font-semibold text-white">Glow de Superfície</p>
                 <code className="font-mono text-[10px]" style={{ color: "rgba(230,231,232,0.4)" }}>rgba(50,69,253,0.15)</code>
               </div>
-            </div>
-          </div>
+            </StaggerItem>
+          </StaggerContainer>
         </div>
-
 
         {/* 5.4 CTA Button */}
-        <div>
-          <h3 className="font-inter font-semibold text-lg text-white mb-4">5.4 CTA Button</h3>
-          <div className="flex flex-wrap items-center gap-6">
-            <button
-              className="rounded-full px-10 py-4 font-inter text-base font-semibold text-white tracking-wide transition-all duration-200 hover:brightness-110 active:scale-[0.97] shadow-lg shadow-[#2E2EFE]/30"
-              style={{ background: "#2E2EFE" }}
-            >
-              Fale Com Um Consultor
-            </button>
-            <span className="font-inter text-[11px]" style={{ color: "var(--brand-text-secondary)" }}>Default + Hover</span>
+        <ScaleIn>
+          <div>
+            <h3 className="font-inter font-semibold text-lg text-white mb-4">5.4 CTA Button</h3>
+            <div className="flex flex-wrap items-center gap-6">
+              <button
+                className="rounded-full px-10 py-4 font-inter text-base font-semibold text-white tracking-wide transition-all duration-200 hover:brightness-110 active:scale-[0.97] shadow-lg shadow-[#2E2EFE]/30"
+                style={{ background: "#2E2EFE" }}
+              >
+                Fale Com Um Consultor
+              </button>
+              <span className="font-inter text-[11px]" style={{ color: "var(--brand-text-secondary)" }}>Default + Hover</span>
+            </div>
           </div>
-        </div>
+        </ScaleIn>
       </div>
     </SectionWrapper>
   );
