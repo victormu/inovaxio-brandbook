@@ -59,9 +59,9 @@ backdrop-filter: blur(12px);`}
         </div>
 
 
-        {/* 5.4 Glows */}
+        {/* 5.3 Glows */}
         <div>
-          <h3 className="font-inter font-semibold text-lg text-white mb-4">5.4 Glows e Brilhos</h3>
+          <h3 className="font-inter font-semibold text-lg text-white mb-4">5.3 Glows e Brilhos</h3>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             <div className="glass-card p-6 flex flex-col items-center gap-4">
               <div className="h-20 w-20 rounded-2xl" style={{ background: "#2E2EFE", boxShadow: "0 0 80px 20px rgba(46,46,254,0.45)" }} />
