@@ -88,9 +88,9 @@ backdrop-filter: blur(12px);`}
         </div>
 
 
-        {/* 5.6 CTA Button */}
+        {/* 5.4 CTA Button */}
         <div>
-          <h3 className="font-inter font-semibold text-lg text-white mb-4">5.6 CTA Button</h3>
+          <h3 className="font-inter font-semibold text-lg text-white mb-4">5.4 CTA Button</h3>
           <div className="flex flex-wrap items-center gap-6">
             <button
               className="rounded-full px-10 py-4 font-inter text-base font-semibold text-white tracking-wide transition-all duration-200 hover:brightness-110 active:scale-[0.97] shadow-lg shadow-[#2E2EFE]/30"
