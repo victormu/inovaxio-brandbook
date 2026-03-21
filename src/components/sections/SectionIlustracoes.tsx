@@ -48,7 +48,6 @@ const dos = [
   "Renders de interface em perspectiva sobre fundo gradiente",
 ];
 const donts = [
-  "Fotografias de stock com pessoas reais",
   "Ilustrações flat coloridas fora da paleta",
   "Ícones genéricos sem tratamento de marca",
 ];
