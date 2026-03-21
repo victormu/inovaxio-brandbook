@@ -17,7 +17,7 @@ const SectionAplicacoes = () => {
             <img src={postExemplo} alt="Post Instagram — exemplo de template" className="rounded-lg w-full" style={{ aspectRatio: "4/5", objectFit: "cover" }} />
           </div>
           <p className="font-inter text-sm mt-4" style={{ color: "var(--brand-text-secondary)" }}>
-            Inter Bold para copy principal · Inter Regular para apoio · Logo centralizado na parte inferior
+            Quicksand Bold para copy principal · Inter Regular para apoio · Logo centralizado na parte inferior
           </p>
         </div>
 
@@ -58,8 +58,8 @@ const SectionAplicacoes = () => {
           </div>
         </div>
       </div>
-    </SectionWrapper>
-  );
+    </SectionWrapper>);
+
 };
 
 export default SectionAplicacoes;
