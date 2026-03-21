@@ -7,7 +7,7 @@ const SectionIntroducao = () => {
         {/* Hero */}
         <div>
           <h1 className="font-quicksand font-bold text-6xl md:text-8xl leading-none text-gradient" style={{ letterSpacing: "-0.04em" }}>
-            INOVAXIO
+            Inovaxio
           </h1>
           <p className="mt-4 font-inter text-xl md:text-2xl font-light" style={{ color: "var(--brand-text-secondary)" }}>
             Transformamos ideias em realidade digital.
@@ -28,23 +28,23 @@ const SectionIntroducao = () => {
 
         {/* Attribute pills */}
         <div className="flex flex-wrap gap-3">
-          {["Inovação com propósito", "Tecnologia humanizada", "Parceria além da entrega"].map(attr => (
-            <span
-              key={attr}
-              className="rounded-full px-5 py-2.5 font-inter text-sm font-medium"
-              style={{
-                background: "rgba(46,46,254,0.1)",
-                border: "1px solid rgba(46,46,254,0.25)",
-                color: "#fff",
-              }}
-            >
+          {["Inovação com propósito", "Tecnologia humanizada", "Parceria além da entrega"].map((attr) =>
+          <span
+            key={attr}
+            className="rounded-full px-5 py-2.5 font-inter text-sm font-medium"
+            style={{
+              background: "rgba(46,46,254,0.1)",
+              border: "1px solid rgba(46,46,254,0.25)",
+              color: "#fff"
+            }}>
+            
               {attr}
             </span>
-          ))}
+          )}
         </div>
       </div>
-    </SectionWrapper>
-  );
+    </SectionWrapper>);
+
 };
 
 export default SectionIntroducao;
