@@ -1,5 +1,6 @@
 import SectionWrapper from "../miv/SectionWrapper";
 import ImagePlaceholder from "../miv/ImagePlaceholder";
+import postExemplo from "@/assets/post-exemplo.png";
 
 const SectionAplicacoes = () => {
   return (
