@@ -43,13 +43,13 @@
 
     /* Glass tokens */
     --glass-bg: rgba(255, 255, 255, 0.05);
-    --glass-border: rgba(46, 46, 254, 0.18);
+    --glass-border: rgba(255, 255, 255, 0.08);
     --glass-bg-strong: rgba(255, 255, 255, 0.06);
-    --glass-border-strong: rgba(46, 46, 254, 0.25);
+    --glass-border-strong: rgba(255, 255, 255, 0.10);
 
     /* Glow */
     --glow-primary: rgba(46, 46, 254, 0.45);
-    --glow-border: rgba(46, 46, 254, 0.5);
+    --glow-border: rgba(0, 229, 255, 0.6);
     --glow-surface: rgba(50, 69, 253, 0.15);
   }
 }
