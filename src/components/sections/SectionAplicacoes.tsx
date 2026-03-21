@@ -2,6 +2,7 @@ import SectionWrapper from "../miv/SectionWrapper";
 import ImagePlaceholder from "../miv/ImagePlaceholder";
 import postExemplo from "@/assets/post-exemplo.png";
 import comercialCapa from "@/assets/comercial-capa.png";
+import comercialConteudo from "@/assets/comercial-conteudo.png";
 
 const SectionAplicacoes = () => {
   return (
@@ -27,7 +28,7 @@ const SectionAplicacoes = () => {
           <span className="font-inter text-xs font-semibold uppercase tracking-widest" style={{ color: "#2E2EFE" }}>Apresentação Comercial</span>
           <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
             <img src={comercialCapa} alt="Slide — Capa da apresentação" className="rounded-lg w-full" style={{ aspectRatio: "16/9", objectFit: "cover" }} />
-            <ImagePlaceholder label="Slide — Conteúdo interno" sublabel="1920 × 1080px" aspectRatio="16/9" />
+            <img src={comercialConteudo} alt="Slide — Conteúdo interno" className="rounded-lg w-full" style={{ aspectRatio: "16/9", objectFit: "cover" }} />
           </div>
           <p className="font-inter text-sm mt-4" style={{ color: "var(--brand-text-secondary)" }}>
             Fundo #231F20 · Logo no canto superior esquerdo · Numeração no canto superior direito
