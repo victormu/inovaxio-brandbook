@@ -14,7 +14,7 @@ const SectionAplicacoes = () => {
         <div className="glass-card p-6 md:p-8">
           <span className="font-inter text-xs font-semibold uppercase tracking-widest" style={{ color: "#2E2EFE" }}>Instagram Post</span>
           <div className="mt-4 max-w-sm">
-            <ImagePlaceholder label="Post completo — referência de template" sublabel="1080 × 1350px" aspectRatio="4/5" />
+            <img src={postExemplo} alt="Post Instagram — exemplo de template" className="rounded-lg w-full" style={{ aspectRatio: "4/5", objectFit: "cover" }} />
           </div>
           <p className="font-inter text-sm mt-4" style={{ color: "var(--brand-text-secondary)" }}>
             Inter Bold para copy principal · Inter Regular para apoio · Logo centralizado na parte inferior
