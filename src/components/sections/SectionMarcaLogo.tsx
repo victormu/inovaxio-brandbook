@@ -56,7 +56,7 @@ const SectionMarcaLogo = () => {
               Versão Ícone
             </span>
             <div className="flex items-center justify-center rounded-xl p-6" style={{ backgroundColor: "#1A1820" }}>
-              <img src={logoSimbolo} alt="Símbolo i/o" className="h-32" />
+              <img src={logoSimbolo} alt="Símbolo i/o" className="h-40" />
             </div>
           </div>
 
