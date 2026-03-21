@@ -60,7 +60,7 @@ const elementos = [
   {
     title: "Esfera",
     desc: "Representa globalidade, inovação e completude. Elemento central da linguagem visual da marca.",
-    src: null as string | null,
+    src: elementoEsfera,
     alt: "Elemento — Esfera",
   },
 ];
