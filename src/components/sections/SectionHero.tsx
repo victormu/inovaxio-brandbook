@@ -3,31 +3,31 @@ import logoPrincipal from "@/assets/logo-mono-branca.svg";
 
 const SectionHero = () => {
   return (
-    <section className="relative flex min-h-[85vh] flex-col items-start justify-center overflow-hidden px-6 md:px-16 lg:px-24 py-24 text-left">
+    <section className="relative flex min-h-[85vh] flex-col items-center justify-center overflow-hidden px-6 py-24 text-center">
       {/* Glow background */}
       <div
         className="pointer-events-none absolute inset-0"
         style={{
           background:
-            "radial-gradient(ellipse at 20% 40%, rgba(46,46,254,0.18) 0%, transparent 65%)",
-        }}
-      />
+          "radial-gradient(ellipse at 50% 40%, rgba(46,46,254,0.18) 0%, transparent 65%)"
+        }} />
+      
 
       <motion.div
-        className="relative z-10 flex flex-col items-start gap-8 max-w-3xl"
+        className="relative z-10 flex flex-col items-center gap-8 max-w-3xl"
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
-      >
+        transition={{ duration: 0.8, ease: "easeOut" }}>
+        
         {/* Logo */}
-        <motion.img
-          src={logoPrincipal}
-          alt="Inovaxio"
-          className="h-12 md:h-16"
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-        />
+        
+
+
+
+
+
+
+        
 
         {/* Badge */}
         <motion.span
@@ -35,8 +35,8 @@ const SectionHero = () => {
           style={{ background: "rgba(46,46,254,0.12)", color: "#2E2EFE", border: "1px solid rgba(46,46,254,0.2)" }}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 0.4 }}
-        >
+          transition={{ delay: 0.4 }}>
+          
           Brandbook · v2.0
         </motion.span>
 
@@ -45,8 +45,8 @@ const SectionHero = () => {
           className="font-inter font-bold text-4xl md:text-6xl lg:text-7xl text-white leading-[1.1] tracking-tight"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.3 }}
-        >
+          transition={{ duration: 0.7, delay: 0.3 }}>
+          
           Manual de
           <br />
           <span style={{ color: "#2E2EFE" }}>Identidade Visual</span>
@@ -58,8 +58,8 @@ const SectionHero = () => {
           style={{ color: "var(--brand-text-secondary)" }}
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.5 }}
-        >
+          transition={{ duration: 0.6, delay: 0.5 }}>
+          
           Este documento reúne todas as diretrizes de marca da Inovaxio — logotipo,
           cores, tipografia, tom de voz e aplicações. Um guia completo para garantir
           consistência e reconhecimento em todos os pontos de contato.
@@ -71,8 +71,8 @@ const SectionHero = () => {
           style={{ background: "rgba(46,46,254,0.5)" }}
           initial={{ scaleX: 0 }}
           animate={{ scaleX: 1 }}
-          transition={{ duration: 0.5, delay: 0.7 }}
-        />
+          transition={{ duration: 0.5, delay: 0.7 }} />
+        
 
         {/* CTA hint */}
         <motion.button
@@ -85,8 +85,8 @@ const SectionHero = () => {
           whileHover={{ color: "rgba(230,231,232,0.8)" }}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 0.9 }}
-        >
+          transition={{ delay: 0.9 }}>
+          
           Explorar
           <motion.svg
             width="20"
@@ -98,14 +98,14 @@ const SectionHero = () => {
             strokeLinecap="round"
             strokeLinejoin="round"
             animate={{ y: [0, 6, 0] }}
-            transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
-          >
+            transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}>
+            
             <path d="M12 5v14M19 12l-7 7-7-7" />
           </motion.svg>
         </motion.button>
       </motion.div>
-    </section>
-  );
+    </section>);
+
 };
 
 export default SectionHero;
