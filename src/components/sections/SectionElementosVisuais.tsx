@@ -134,13 +134,10 @@ backdrop-filter: blur(12px);`}
           <h3 className="font-inter font-semibold text-lg text-white mb-4">5.6 CTA Button</h3>
           <div className="flex flex-wrap items-center gap-6">
             <button
-              className="group flex items-center gap-3 rounded-full pl-6 pr-2 py-2 font-inter text-sm font-semibold text-white transition-all duration-200 hover:brightness-110 active:scale-[0.97]"
-              style={{ background: "linear-gradient(135deg, #2E2EFE, #3245FD)" }}
+              className="rounded-full px-10 py-4 font-inter text-base font-semibold text-white tracking-wide transition-all duration-200 hover:brightness-110 active:scale-[0.97] shadow-lg shadow-[#2E2EFE]/30"
+              style={{ background: "#2E2EFE" }}
             >
-              Fale com a gente
-              <span className="flex h-8 w-8 items-center justify-center rounded-full bg-white transition-transform duration-200 group-hover:translate-x-0.5">
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7h8m0 0L8 4m3 3L8 10" stroke="#231F20" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
-              </span>
+              Fale Com Um Consultor
             </button>
             <span className="font-inter text-[11px]" style={{ color: "var(--brand-text-secondary)" }}>Default + Hover</span>
           </div>
