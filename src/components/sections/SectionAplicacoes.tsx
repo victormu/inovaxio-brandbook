@@ -40,7 +40,7 @@ const SectionAplicacoes = () => {
         <div className="glass-card p-6 md:p-8">
           <span className="font-inter text-xs font-semibold uppercase tracking-widest" style={{ color: "#2E2EFE" }}>Cartão de Visita</span>
           <div className="mt-4 max-w-md">
-            <ImagePlaceholder label="Mockup — Cartão de visita" sublabel="PNG ou JPG" aspectRatio="8/5" />
+            <img src={cartaoVisita} alt="Mockup — Cartão de visita" className="rounded-lg w-full" style={{ aspectRatio: "8/5", objectFit: "cover" }} />
           </div>
           <div className="mt-4 flex flex-wrap gap-x-4 gap-y-1 font-inter text-[13px]" style={{ color: "var(--brand-text-secondary)" }}>
             <span>contato@inovaxio.com.br</span>
