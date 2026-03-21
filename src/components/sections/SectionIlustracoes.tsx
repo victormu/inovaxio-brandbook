@@ -7,6 +7,8 @@ import obj3 from "@/assets/obj3.png";
 import ilus1 from "@/assets/ilus1.png";
 import ilus2 from "@/assets/ilus2.png";
 import ilus3 from "@/assets/ilus3.png";
+import elementoMaos from "@/assets/elemento-maos.png";
+import elementoPessoa from "@/assets/elemento-pessoa.png";
 
 const categories = [
   {
@@ -23,7 +25,6 @@ const categories = [
       { src: obj2, alt: "Objeto 3D — Cubos metálicos" },
       { src: obj3, alt: "Objeto 3D — Painéis de vidro" },
     ],
-    placeholders: [],
   },
   {
     title: "Ilustrações Conceituais",
@@ -39,7 +40,27 @@ const categories = [
       { src: ilus2, alt: "Ilustração — Interface digital" },
       { src: ilus3, alt: "Ilustração — Conexão e negócios" },
     ],
-    placeholders: [],
+  },
+];
+
+const elementos = [
+  {
+    title: "Mãos",
+    desc: "Representam parceria, confiança e negociação. Sempre em estilo 3D monocromático azul, sem traços realistas.",
+    src: elementoMaos,
+    alt: "Elemento — Mãos",
+  },
+  {
+    title: "Pessoas",
+    desc: "Figuras humanas abstratas, sem aspectos faciais definidos. Transmitem profissionalismo e autoridade de forma universal.",
+    src: elementoPessoa,
+    alt: "Elemento — Pessoa",
+  },
+  {
+    title: "Esfera",
+    desc: "Representa globalidade, inovação e completude. Elemento central da linguagem visual da marca.",
+    src: null as string | null,
+    alt: "Elemento — Esfera",
   },
 ];
 
