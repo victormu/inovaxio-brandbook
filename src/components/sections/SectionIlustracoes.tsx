@@ -1,15 +1,16 @@
 import SectionWrapper from "../miv/SectionWrapper";
 import ImagePlaceholder from "../miv/ImagePlaceholder";
 import { Check, X } from "lucide-react";
-import obj1 from "@/assets/obj1.png";
-import obj2 from "@/assets/obj2.png";
-import obj3 from "@/assets/obj3.png";
-import ilus1 from "@/assets/ilus1.png";
-import ilus2 from "@/assets/ilus2.png";
-import ilus3 from "@/assets/ilus3.png";
-import elementoMaos from "@/assets/elemento-maos.png";
-import elementoPessoa from "@/assets/elemento-pessoa.png";
-import elementoEsfera from "@/assets/elemento-esfera.png";
+import { FadeUp, StaggerContainer, StaggerItem } from "../miv/AnimatedSection";
+import obj1 from "@/assets/obj1.png?format=webp&quality=80";
+import obj2 from "@/assets/obj2.png?format=webp&quality=80";
+import obj3 from "@/assets/obj3.png?format=webp&quality=80";
+import ilus1 from "@/assets/ilus1.png?format=webp&quality=80";
+import ilus2 from "@/assets/ilus2.png?format=webp&quality=80";
+import ilus3 from "@/assets/ilus3.png?format=webp&quality=80";
+import elementoMaos from "@/assets/elemento-maos.png?format=webp&quality=80";
+import elementoPessoa from "@/assets/elemento-pessoa.png?format=webp&quality=80";
+import elementoEsfera from "@/assets/elemento-esfera.png?format=webp&quality=80";
 
 const categories = [
   {
@@ -86,60 +87,64 @@ const SectionIlustracoes = () => {
         </div>
 
         {categories.map((cat, idx) => (
-          <div key={idx} className="glass-card p-6 md:p-8">
-            <span className="font-inter text-[11px] font-semibold uppercase tracking-widest" style={{ color: "#2E2EFE" }}>
-              Categoria {idx + 1}
-            </span>
-            <h3 className="font-inter font-semibold text-xl text-white mt-2 mb-2">{cat.title}</h3>
-            <p className="font-inter text-sm mb-4" style={{ color: "var(--brand-text-secondary)" }}>{cat.desc}</p>
-            <ul className="space-y-1 mb-6">
-              {cat.rules.map((r, i) => (
-                <li key={i} className="flex items-start gap-2 font-inter text-[13px]" style={{ color: "rgba(230,231,232,0.6)" }}>
-                  <span style={{ color: "#2E2EFE" }}>•</span> {r}
-                </li>
-              ))}
-            </ul>
-            <div className="grid grid-cols-3 gap-4">
-              {cat.images.map((img, i) => (
-                <div key={i} className="rounded-xl overflow-hidden" style={{ aspectRatio: "4/5" }}>
-                  <img src={img.src} alt={img.alt} className="w-full h-full object-cover" />
-                </div>
-              ))}
+          <FadeUp key={idx} delay={idx * 0.1}>
+            <div className="glass-card p-6 md:p-8">
+              <span className="font-inter text-[11px] font-semibold uppercase tracking-widest" style={{ color: "#2E2EFE" }}>
+                Categoria {idx + 1}
+              </span>
+              <h3 className="font-inter font-semibold text-xl text-white mt-2 mb-2">{cat.title}</h3>
+              <p className="font-inter text-sm mb-4" style={{ color: "var(--brand-text-secondary)" }}>{cat.desc}</p>
+              <ul className="space-y-1 mb-6">
+                {cat.rules.map((r, i) => (
+                  <li key={i} className="flex items-start gap-2 font-inter text-[13px]" style={{ color: "rgba(230,231,232,0.6)" }}>
+                    <span style={{ color: "#2E2EFE" }}>•</span> {r}
+                  </li>
+                ))}
+              </ul>
+              <StaggerContainer className="grid grid-cols-3 gap-4">
+                {cat.images.map((img, i) => (
+                  <StaggerItem key={i} className="rounded-xl overflow-hidden" style={{ aspectRatio: "4/5" }}>
+                    <img src={img.src} alt={img.alt} className="w-full h-full object-cover" loading="lazy" />
+                  </StaggerItem>
+                ))}
+              </StaggerContainer>
             </div>
-          </div>
+          </FadeUp>
         ))}
 
         {/* Elementos-chave das Ilustrações */}
-        <div className="glass-card p-6 md:p-8">
-          <span className="font-inter text-[11px] font-semibold uppercase tracking-widest" style={{ color: "#2E2EFE" }}>
-            Elementos-Chave
-          </span>
-          <h3 className="font-inter font-semibold text-xl text-white mt-2 mb-2">Elementos das Ilustrações</h3>
-          <p className="font-inter text-sm mb-6" style={{ color: "var(--brand-text-secondary)" }}>
-            As ilustrações da Inovaxio utilizam 3 elementos-chave recorrentes que reforçam a identidade visual e a narrativa da marca.
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {elementos.map((el, i) => (
-              <div key={i} className="flex flex-col items-center gap-4">
-                <div className="rounded-xl overflow-hidden w-full" style={{ aspectRatio: "1/1" }}>
-                  {el.src ? (
-                    <img src={el.src} alt={el.alt} className="w-full h-full object-cover" />
-                  ) : (
-                    <ImagePlaceholder label={el.title} sublabel="Próximo envio" aspectRatio="1/1" className="w-full h-full" />
-                  )}
-                </div>
-                <div className="text-center">
-                  <h4 className="font-inter font-semibold text-white text-base mb-1">{el.title}</h4>
-                  <p className="font-inter text-[13px]" style={{ color: "var(--brand-text-secondary)" }}>{el.desc}</p>
-                </div>
-              </div>
-            ))}
+        <FadeUp delay={0.2}>
+          <div className="glass-card p-6 md:p-8">
+            <span className="font-inter text-[11px] font-semibold uppercase tracking-widest" style={{ color: "#2E2EFE" }}>
+              Elementos-Chave
+            </span>
+            <h3 className="font-inter font-semibold text-xl text-white mt-2 mb-2">Elementos das Ilustrações</h3>
+            <p className="font-inter text-sm mb-6" style={{ color: "var(--brand-text-secondary)" }}>
+              As ilustrações da Inovaxio utilizam 3 elementos-chave recorrentes que reforçam a identidade visual e a narrativa da marca.
+            </p>
+            <StaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {elementos.map((el, i) => (
+                <StaggerItem key={i} className="flex flex-col items-center gap-4">
+                  <div className="rounded-xl overflow-hidden w-full" style={{ aspectRatio: "1/1" }}>
+                    {el.src ? (
+                      <img src={el.src} alt={el.alt} className="w-full h-full object-cover" loading="lazy" />
+                    ) : (
+                      <ImagePlaceholder label={el.title} sublabel="Próximo envio" aspectRatio="1/1" className="w-full h-full" />
+                    )}
+                  </div>
+                  <div className="text-center">
+                    <h4 className="font-inter font-semibold text-white text-base mb-1">{el.title}</h4>
+                    <p className="font-inter text-[13px]" style={{ color: "var(--brand-text-secondary)" }}>{el.desc}</p>
+                  </div>
+                </StaggerItem>
+              ))}
+            </StaggerContainer>
           </div>
-        </div>
+        </FadeUp>
 
         {/* Do / Don't */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div className="rounded-xl p-5" style={{ background: "rgba(34,197,94,0.06)", border: "1px solid rgba(34,197,94,0.15)" }}>
+        <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <StaggerItem className="rounded-xl p-5" style={{ background: "rgba(34,197,94,0.06)", border: "1px solid rgba(34,197,94,0.15)" }}>
             <span className="font-inter text-xs font-semibold uppercase tracking-widest" style={{ color: "#22c55e" }}>Correto</span>
             <ul className="mt-3 space-y-2">
               {dos.map(d => (
@@ -148,8 +153,8 @@ const SectionIlustracoes = () => {
                 </li>
               ))}
             </ul>
-          </div>
-          <div className="rounded-xl p-5" style={{ background: "rgba(239,68,68,0.06)", border: "1px solid rgba(239,68,68,0.15)" }}>
+          </StaggerItem>
+          <StaggerItem className="rounded-xl p-5" style={{ background: "rgba(239,68,68,0.06)", border: "1px solid rgba(239,68,68,0.15)" }}>
             <span className="font-inter text-xs font-semibold uppercase tracking-widest" style={{ color: "#ef4444" }}>Incorreto</span>
             <ul className="mt-3 space-y-2">
               {donts.map(d => (
@@ -158,8 +163,8 @@ const SectionIlustracoes = () => {
                 </li>
               ))}
             </ul>
-          </div>
-        </div>
+          </StaggerItem>
+        </StaggerContainer>
       </div>
     </SectionWrapper>
   );

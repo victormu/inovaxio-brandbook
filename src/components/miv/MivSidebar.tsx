@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 import simboloBranco from "@/assets/logo-simbolo-branco.svg";
 
 const sections = [
@@ -21,7 +22,6 @@ const MivSidebar = () => {
       (entries) => {
         const visible = entries.filter(e => e.isIntersecting);
         if (visible.length > 0) {
-          // pick the one closest to the top
           visible.sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
           setActive(visible[0].target.id);
         }
@@ -63,9 +63,11 @@ const MivSidebar = () => {
             const isActive = active === s.id;
             return (
               <li key={s.id}>
-                <button
+                <motion.button
                   onClick={() => handleClick(s.id)}
-                  className="group flex w-full items-center gap-3 rounded-lg px-3 py-2.5 text-left transition-all duration-200"
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                  className="group flex w-full items-center gap-3 rounded-lg px-3 py-2.5 text-left transition-colors duration-200"
                   style={{
                     background: isActive ? "rgba(46,46,254,0.12)" : "transparent",
                     color: isActive ? "#fff" : "rgba(230,231,232,0.55)",
@@ -79,12 +81,14 @@ const MivSidebar = () => {
                   </span>
                   <span className="font-inter text-[13px] font-medium">{s.label}</span>
                   {isActive && (
-                    <span
+                    <motion.span
+                      layoutId="sidebar-dot"
                       className="ml-auto h-1.5 w-1.5 rounded-full"
                       style={{ backgroundColor: "#2E2EFE" }}
+                      transition={{ type: "spring", stiffness: 500, damping: 30 }}
                     />
                   )}
-                </button>
+                </motion.button>
               </li>
             );
           })}
