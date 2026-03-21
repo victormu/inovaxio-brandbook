@@ -58,30 +58,6 @@ backdrop-filter: blur(12px);`}
           </code>
         </div>
 
-        {/* 5.3 Elementos 3D */}
-        <div>
-          <h3 className="font-inter font-semibold text-lg text-white mb-4">5.3 Elementos 3D</h3>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-            {[
-              { label: "Objeto 3D — Grid de cristal", img: obj1 },
-              { label: "Objeto 3D — Cubos metálicos", img: obj2 },
-              { label: "Objeto 3D — Painéis de vidro", img: obj3 },
-            ].map((item) => (
-              <div key={item.label} className="glass-card p-4 flex flex-col gap-3">
-                <div className="rounded-xl overflow-hidden" style={{ aspectRatio: "4/5" }}>
-                  <img src={item.img} alt={item.label} className="w-full h-full object-cover" />
-                </div>
-                <p className="font-inter text-[12px] text-center" style={{ color: "var(--brand-text-secondary)" }}>
-                  {item.label}
-                </p>
-              </div>
-            ))}
-          </div>
-          <p className="font-inter text-sm mt-4" style={{ color: "var(--brand-text-secondary)" }}>
-            Sempre iluminados com luz de borda azul elétrico e ciano. Reforçam o conceito: tecnologia que
-            você pode visualizar, tocar e acreditar.
-          </p>
-        </div>
 
         {/* 5.4 Glows */}
         <div>
