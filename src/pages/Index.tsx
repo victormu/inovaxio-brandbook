@@ -48,6 +48,7 @@ const Index = () => {
       <MivSidebar />
       <TopBar />
       <main className="lg:ml-[240px] pt-14">
+        <SectionHero />
         <SectionIntroducao />
         <SectionMarcaLogo />
         <SectionConstrucaoSimbolo />
