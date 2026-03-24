@@ -1,7 +1,7 @@
 import SectionWrapper from "../miv/SectionWrapper";
 import { FadeUp, ScaleIn } from "../miv/AnimatedSection";
-import gridAureo from "@/assets/grid-aureo.png?format=webp&quality=80";
-import construcaoSimbolo from "@/assets/construcao-simbolo.png?format=webp&quality=80";
+import gridAureo from "@/assets/grid-aureo.png";
+import construcaoSimbolo from "@/assets/construcao-simbolo.png";
 
 const SectionConstrucaoSimbolo = () => {
   return (
