@@ -1,1 +1,4 @@
 project_id = "wplgbbsecmlwkljbmkba"
+
+[functions.brandbook]
+verify_jwt = false
